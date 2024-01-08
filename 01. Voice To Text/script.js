@@ -1,5 +1,8 @@
 
-			/* JS comes here */
+
+            
+            
+            /* JS comes here */
 		    function runSpeechRecognition() {
 		        // get output div reference
 		        var output = document.getElementById("output");
@@ -12,6 +15,7 @@
                 // This runs when the speech recognition service starts
                 recognition.onstart = function() {
                     action.innerHTML = "<small>listening, please speak...</small>";
+                
                 };
                 
                 // recognition.onspeechend = function() {
@@ -19,6 +23,10 @@
                 //     recognition.stop();
                 // }
 
+                // let prop = "caise";
+
+   
+                  
 
                 //======================================
               
@@ -31,10 +39,37 @@
                     output.classList.remove("hide");
 
                     console.log(transcript); //<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< Aici afiseaza textul in consola
+
+                    voice = transcript;
                 };
               
                  // start recognition
-                 recognition.start();
+                 
 	
+
+                 recognition.start();
+
+            }
+
+       
+
+            function compareResult(){
+                function caisa(a, b){
+                 if(a==b){
+                    return true;
+                    }else{
+                    return false
                 }
+                
             
+                        }
+                        
+                        let z = caisa(voice,"I love my wife")
+                        console.log(z);
+                     
+                    }
+
+           
+              
+            
+           
